@@ -1,0 +1,28 @@
+<h1 class="text-center my-4">My Domains</h1>
+<section role="main" class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Expiration</th>
+          <th>Renewal Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let domain of domains">
+          <td>{{ domain.name }}</td>
+          <td>{{ domain.expiration }}</td>
+          <td>{{ domain.renewal_price | currency:"INR" }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="sendData(domain)">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<router-outlet />

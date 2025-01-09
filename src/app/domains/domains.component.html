@@ -1,0 +1,38 @@
+
+  <!-- Modal -->
+  <div id="myModal" class="modal  modal-lg" role="dialog" #propertyModal>
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+            <h2 class="text-center mb-4">My Domain Details</h2>
+          
+        </div>
+        <div class="modal-body"> 
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">ID: {{recivedData.id}}</li>
+            <li class="list-group-item list-group-item-secondary"><label>Name:</label>
+              {{recivedData.name}}</li>
+            <li class="list-group-item list-group-item-success"><label>Expiration:</label>
+              {{recivedData.expiration}}</li>
+            <li class="list-group-item list-group-item-danger"><label>Auto Renew:</label>
+              {{recivedData.auto_renew}}</li>
+            <li class="list-group-item list-group-item-warning"><label>Domain Privacy:</label>
+              {{recivedData.domain_privacy}}</li>
+            <li class="list-group-item list-group-item-info"> <label>Renewal Price:</label>
+              {{recivedData.renewal_price}}</li>
+     
+          </ul> 
+     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeModal()">Back to the list</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
